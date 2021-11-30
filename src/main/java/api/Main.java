@@ -124,7 +124,10 @@ public class Main {
         return str.substring(0,8);
     }
     public static String extractGetAllTasksByPersonApi(String str){
-        return str.substring(0,19);
+        if (str.length()>=19) {
+            return str.substring(0, 19);
+        }
+        return str;
     }
     public static String extractStopProgramApi(String str){
         return str.substring(0,11);
